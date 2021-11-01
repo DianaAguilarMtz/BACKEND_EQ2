@@ -87,6 +87,18 @@ exports.getPlaylist = async (req,res)=>{
 
 }
 
+exports.postActualizarPlaylist = async (req,res)=>{
+    try{
+        await Contenido.findOneAndUpdate({"playlist":req.body.playlist,"titulo":req.body.titulo},{"playlist":"none"})
+        console.log("Cambio realizado")
+        res.json({operacion: "correcta"})
+    }catch(err){
+        console.log(err)
+        res.json({operacion: "incorrecta"})
+    }
+
+}
+
 exports.postBorrarPlaylist = async (req,res)=>{
     try {
         await Contenido.updateMany({"playlist":req.body.playlist},{"$set":{"playlist":"none"}})

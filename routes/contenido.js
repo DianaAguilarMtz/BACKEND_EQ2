@@ -21,7 +21,8 @@ router.post('/borrarContenido',contenidoController.postBorrarContenido)
 //Create
 router.post('/agregaraLaPlaylist',contenidoController.postAgregaraLaPlaylist)
 router.get('/Playlist/:playlist',contenidoController.getPlaylist)
-router.post('/borrarPlaylist',contenidoController.postBorrarPlaylist )
+router.post('/borrarPlaylist',contenidoController.postBorrarPlaylist)
+router.post('/actualizarPlaylist',contenidoController.postActualizarPlaylist)
 
 
 
