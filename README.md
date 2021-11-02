@@ -182,9 +182,9 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|La playlost debe existir|422|
+|InvalidBodyException|La playlist debe existir|422|
 
-- respuesta: HTTP status 200
+- respuesta: HTTP status 200 && muestra los elementos de la playlist
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
 #### Update playlist 
@@ -204,13 +204,13 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|playlist && titulo| Deben de ser existir en el contenido|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException|La playlist debe de existir dentor de nuestro contenido y el titulo debe existir dentro de la playlist|422|
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
