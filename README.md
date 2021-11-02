@@ -131,7 +131,7 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 ### CRUD PARA MANEJAR EL CONTENIDO A UNA PLAYLIST ESPECIFICA
 
-#### Create contenido 
+#### Create playlist
 Servicio para ingresar un libro o una canción a la base de datos.
 
 - Endpoint `/agregarContenido`
@@ -162,7 +162,7 @@ Servicio para ingresar un libro o una canción a la base de datos.
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
+#### Read playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
 - Endpoint `/agregarContenido`
@@ -193,7 +193,7 @@ Servicio para ingresar un libro o una canción a la base de datos.
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
+#### Update playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
 - Endpoint `/agregarContenido`
@@ -224,7 +224,7 @@ Servicio para ingresar un libro o una canción a la base de datos.
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
+#### Delete playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
 - Endpoint `/agregarContenido`
