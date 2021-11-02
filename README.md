@@ -218,16 +218,12 @@ Servicio para ingresar un libro o una canción a la base de datos.
 #### Delete playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
-- Endpoint `/agregarContenido`
+- Endpoint `/borrarPlaylist`
 - Método `POST`
 - body 
 ```javascript
 {
-    "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
+    "playlist": "prueba"
 }
 ```
 
@@ -235,13 +231,13 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|playlist| La playlist debe de existir|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException|La playlist debe de existir|422|
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
