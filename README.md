@@ -36,10 +36,10 @@ Servicio para ingresar un libro o una canción a la base de datos.
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
-Servicio para ingresar un libro o una canción a la base de datos.
+#### Read contenido 
+Servicio para obtener todo el contenido en la base de datos
 
-- Endpoint `/agregarContenido`
+- Endpoint `/obtenerContenido`
 - Método `POST`
 - body 
 ```javascript
