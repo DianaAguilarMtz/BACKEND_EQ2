@@ -40,15 +40,10 @@ Servicio para ingresar un libro o una canción a la base de datos.
 Servicio para obtener todo el contenido en la base de datos
 
 - Endpoint `/obtenerContenido`
-- Método `POST`
+- Método `GET`
 - body 
 ```javascript
 {
-    "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
 }
 ```
 
@@ -56,30 +51,28 @@ Servicio para obtener todo el contenido en la base de datos
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+| | |
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+| | | |
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
-Servicio para ingresar un libro o una canción a la base de datos.
+#### Update contenido 
+Servicio para actualizar un libro o una canción que se encuentre en la base de datos.
 
-- Endpoint `/agregarContenido`
+- Endpoint `/actualizarContenido`
 - Método `POST`
 - body 
 ```javascript
 {
     "tipo": "cancion",
     "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
+    "año": 2020
 }
 ```
 
@@ -87,30 +80,27 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|tipo && titulo| Deben de existir en la base de datos|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException|El título y el tipo deben existir en la base de datos|422|
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
-#### Create contenido 
-Servicio para ingresar un libro o una canción a la base de datos.
+#### Delete contenido 
+Servicio para eliminar un libro o una canción a la base de datos.
 
-- Endpoint `/agregarContenido`
+- Endpoint `/borrarContenido`
 - Método `POST`
 - body 
 ```javascript
 {
     "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
+    "titulo": "calladita"
 }
 ```
 
@@ -118,13 +108,13 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|tipo && titulo| Deben de existir en el contenido|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException| Deben de existir en el contenido|422|
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
