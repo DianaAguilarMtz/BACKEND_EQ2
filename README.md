@@ -163,16 +163,12 @@ Servicio para ingresar un libro o una canción a una playlist nueva.
 #### Read playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
-- Endpoint `/agregarContenido`
-- Método `POST`
+- Endpoint `/Playlist/:playlist`
+- Método `GET`
 - body 
 ```javascript
 {
-    "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2029,
-    "genero": "reggaeton",
+    
 }
 ```
 
@@ -180,30 +176,27 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|playlist| Deben de existir la playlist|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException|La playlost debe existir|422|
 
-- respuesta: HTTP status 200 & message: 'Correcto'
+- respuesta: HTTP status 200
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
 
 #### Update playlist 
 Servicio para ingresar un libro o una canción a la base de datos.
 
-- Endpoint `/agregarContenido`
+- Endpoint `/actualizarPlaylist`
 - Método `POST`
 - body 
 ```javascript
 {
-    "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
+    "playlist": "prueba",
+    "titulo" : "harry potter"
 }
 ```
 
