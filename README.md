@@ -132,18 +132,16 @@ Servicio para ingresar un libro o una canción a la base de datos.
 ### CRUD PARA MANEJAR EL CONTENIDO A UNA PLAYLIST ESPECIFICA
 
 #### Create playlist
-Servicio para ingresar un libro o una canción a la base de datos.
+Servicio para ingresar un libro o una canción a una playlist nueva.
 
-- Endpoint `/agregarContenido`
+- Endpoint `/agregaraLaPlaylist`
 - Método `POST`
 - body 
 ```javascript
 {
-    "tipo": "cancion",
-    "titulo": "calladita",
-    "autor": "Bad Bunny",
-    "año": 2019,
-    "genero": "reggaeton",
+    "tipo": "libro",
+    "titulo": "Los juegos del hambre",
+    "playlist": "prueba"
 }
 ```
 
@@ -151,13 +149,13 @@ Servicio para ingresar un libro o una canción a la base de datos.
 
 |campo|Validación|
 |:--------|:---------|
-|tipo && titulo| Deben de ser únicos en el contenido|
+|tipo && titulo| Deben existir en el contenido|
 
 - Errores
 
 |Código|Mensaje|Http|
 |:---|:---|:---|
-|InvalidBodyException|El título y el tipo deben de ser unicos|422|
+|InvalidBodyException|El título y el tipo deben de existir dentro del contenido|422|
 
 - respuesta: HTTP status 200 & message: 'Correcto'
 - respuesta con error:  HTTP status 422 & message 'incorrecto'
