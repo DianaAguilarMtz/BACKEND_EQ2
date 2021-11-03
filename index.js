@@ -18,7 +18,7 @@ app.use('/',rutasContenido)
 
 //listen
 mongoose.connect('mongodb://user2:root@18.234.222.26:27017/base2?authSource=admin')
-app.listen(8080,()=>{
-    console.log("servidor activo en el puerto 8080")
+app.listen(8082,()=>{
+    console.log("servidor activo en el puerto 8082")
 })
 

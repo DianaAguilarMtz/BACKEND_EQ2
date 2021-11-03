@@ -101,7 +101,7 @@ exports.getPlaylist = async (req, res) => {
         const playlist = await Contenido.find({
             playlist: req.params.playlist,
         });
-        if(playlist.length()>0){
+        if(playlist.length>0){
             res.status(200).json(playlist);
         }
         else{
